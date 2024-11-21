@@ -1,0 +1,79 @@
+<p class="text-center fs-4 fw-bold dark-text">Todo works!</p>
+<div class="todo-container container p-3">
+  <h2 class="text-primary dark-text">Create Todo</h2>
+  
+  <!-- Todo Form -->
+  <form (ngSubmit)="onSubmit()" class="mb-3">
+    <div class="mb-3">
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label class="dark-text">Title</mat-label>
+        <input matInput [(ngModel)]="newTodo.title" name="title" placeholder="Title" required />
+      </mat-form-field>
+    </div>
+    <div class="mb-3">
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label class="dark-text">Description</mat-label>
+        <input matInput [(ngModel)]="newTodo.description" name="description" placeholder="Description" required />
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" type="submit" class="w-100">Add Todo</button>
+  </form>
+
+  <!-- Todo List -->
+  <h2 class="text-primary dark-text">Todo List</h2>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons mb-3">
+    <button mat-button color="primary" (click)="showAll()" class="dark-text">Show All</button>
+    <button mat-button color="accent" (click)="showCompleted()" class="dark-text">Show Completed</button>
+    <button mat-button color="warn" (click)="showPending()" class="dark-text">Show Pending</button>
+  </div>
+
+  <!-- Todo Table -->
+  <table mat-table [dataSource]="filteredTodos" class="table table-striped table-hover table-bordered shadow-lg rounded">
+    
+    <!-- Title Column -->
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef class="dark-text"> Title </th>
+      <td mat-cell *matCellDef="let todo" class="dark-text"> {{ todo.title }} </td>
+    </ng-container>
+
+    <!-- Description Column -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef class="dark-text"> Description </th>
+      <td mat-cell *matCellDef="let todo" class="dark-text"> {{ todo.description }} </td>
+    </ng-container>
+
+    <!-- Status Column -->
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef class="dark-text"> Status </th>
+      <td mat-cell *matCellDef="let todo" class="dark-text">
+        <mat-checkbox [checked]="todo.status === 'completed'" (change)="toggleStatus(todo.id)"></mat-checkbox>
+      </td>
+    </ng-container>
+
+    <!-- Actions Column -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef class="dark-text"> Actions </th>
+      <td mat-cell *matCellDef="let todo" class="dark-text">
+        <button mat-icon-button color="accent" (click)="onEdit(todo)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="onDelete(todo.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <!-- Table Header Row -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+    <!-- Table Row -->
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <!-- No Todos Available -->
+  <div *ngIf="filteredTodos.length === 0" class="alert alert-info text-center dark-text">
+    No todos available.
+  </div>
+</div>

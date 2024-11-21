@@ -1,0 +1,16 @@
+.vh-100 {
+  min-height: 100vh; /* Full viewport height for centering */
+}
+
+.registration-container {
+  max-width: 500px; /* Limit the width for compact alignment */
+  background-color: #ffffff; /* Add a background color for visibility */
+}
+
+.shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-center {
+  text-align: center;
+}

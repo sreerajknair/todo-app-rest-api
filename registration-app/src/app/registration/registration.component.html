@@ -1,0 +1,48 @@
+<p class="text-center fs-4 fw-bold">Registration works!</p>
+
+<form (ngSubmit)="Submit(Signup)" #Signup="ngForm" class="px-3 py-4">
+  <!-- First Name -->
+  <mat-form-field appearance="outline" class="w-100 mb-3">
+    <mat-label>First Name</mat-label>
+    <input matInput type="text" name="firstName" id="firstname" ngModel required>
+  </mat-form-field>
+
+  <!-- Last Name -->
+  <mat-form-field appearance="outline" class="w-100 mb-3">
+    <mat-label>Last Name</mat-label>
+    <input matInput type="text" name="lastName" id="lastname" ngModel required>
+  </mat-form-field>
+
+  <!-- Email -->
+  <mat-form-field appearance="outline" class="w-100 mb-3">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" name="email" id="email" ngModel required>
+  </mat-form-field>
+
+  <!-- Password -->
+  <mat-form-field appearance="outline" class="w-100 mb-3">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" name="password" id="password" ngModel required>
+  </mat-form-field>
+
+  <!-- Mobile Number -->
+  <mat-form-field appearance="outline" class="w-100 mb-3">
+    <mat-label>Mobile Number</mat-label>
+    <input matInput type="tel" name="mobileno" id="mobileno" ngModel required>
+  </mat-form-field>
+
+  <!-- Gender Selection -->
+  <div class="gender-selection text-center mb-3">
+    <label class="fw-bold">Gender: </label>
+    <mat-radio-group name="gender" ngModel required>
+      <mat-radio-button value="male" class="mx-2">Male</mat-radio-button>
+      <mat-radio-button value="female" class="mx-2">Female</mat-radio-button>
+      <mat-radio-button value="other" class="mx-2">Other</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <!-- Save Button -->
+  <div class="text-center">
+    <button mat-raised-button color="primary" type="submit">Save</button>
+  </div>
+</form>

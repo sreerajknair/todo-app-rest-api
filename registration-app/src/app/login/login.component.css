@@ -1,0 +1,19 @@
+.custom-bg {
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.8), rgba(40, 167, 69, 0.8)), url('https://via.placeholder.com/1920x1080.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  .login-container {
+    max-width: 400px; /* Limit width for better alignment */
+  }
+  
+  .vh-100 {
+    min-height: 100vh; /* Full viewport height to center vertically */
+  }
+  
+  .text-white {
+    color: #fff;
+  }
+  

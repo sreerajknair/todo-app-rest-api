@@ -1,0 +1,16 @@
+<div class="container text-center my-5 custom-bg p-4 rounded shadow">
+    <h1 class="display-4 mb-4">{{ "WELCOME" | translate }}</h1>
+  
+    <div class="d-flex justify-content-between flex-wrap mb-4">
+        <button mat-raised-button color="primary" (click)="changeLanguage('en')" class="mx-3 mb-3">English</button>
+        <button mat-raised-button color="accent" (click)="changeLanguage('ml')" class="mx-3 mb-3">Malayalam</button>
+        <button mat-raised-button color="warn" (click)="changeLanguage('hi')" class="mx-3 mb-3">Hindi</button>
+    </div>
+    <br> <br>
+    <div class="mt-4 d-flex justify-content-between flex-wrap">
+        <a routerLink="reg" mat-raised-button color="primary" class="mx-3 mb-3">Register</a>
+        <a routerLink="login" mat-raised-button color="primary" class="mx-3 mb-3">Login</a>
+    </div>
+  
+    <router-outlet></router-outlet>
+</div>

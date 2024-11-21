@@ -1,0 +1,14 @@
+.profile-card {
+    max-width: 500px; /* Limit the card width to prevent it from expanding too much */
+    margin: 0 auto;   /* Center the card in the container */
+  }
+  
+  .dark-text {
+    color: #333;      /* Darker text for better contrast */
+  }
+  
+  .alert-warning {
+    border-radius: 8px;
+    padding: 16px;
+  }
+  

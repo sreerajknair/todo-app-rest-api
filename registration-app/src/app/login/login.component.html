@@ -1,0 +1,33 @@
+<div class="custom-bg d-flex align-items-center justify-content-center vh-100">
+    <div class="container my-5 p-4 rounded shadow-lg login-container">
+      <h2 class="text-center mb-4 text-white">LOGIN</h2>
+      
+      <form (ngSubmit)="Submit(Signup)" #Signup="ngForm" class="form-group">
+        
+        <!-- Email Field -->
+        <mat-form-field appearance="fill" class="w-100 mb-3">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" name="email" id="email" ngModel required placeholder="Enter your email">
+          <mat-error *ngIf="Signup.submitted && !Signup.controls['email'].valid">Email is required.</mat-error>
+        </mat-form-field>
+  
+        <!-- Password Field -->
+        <mat-form-field appearance="fill" class="w-100 mb-3">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" name="password" id="password" ngModel required placeholder="Enter your password">
+          <mat-error *ngIf="Signup.submitted && !Signup.controls['password'].valid">Password is required.</mat-error>
+        </mat-form-field>
+  
+        <!-- Submit Button -->
+        <div class="d-grid gap-2">
+          <button mat-raised-button color="primary" type="submit" class="w-100">Login</button>
+        </div>
+      </form>
+      
+      <!-- Register Link -->
+      <div class="text-center mt-3">
+        <a routerLink="/register" mat-button class="btn btn-outline-light">Don't have an account? Register</a>
+      </div>
+    </div>
+  </div>
+  

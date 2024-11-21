@@ -1,0 +1,47 @@
+.custom-bg {
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.8), rgba(40, 167, 69, 0.8)), url('https://via.placeholder.com/1920x1080.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 40px;
+}
+
+.custom-bg h1 {
+    font-weight: bold;
+    color: white; /* Ensure the heading text is visible */
+}
+
+.custom-bg .btn-group .btn {
+    background-color: rgba(255, 255, 255, 0.7); /* Light background for the buttons */
+    color: #333; /* Dark text for better contrast */
+    border: 1px solid #ccc; /* Light border */
+}
+
+.custom-bg .btn-group .btn:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly lighter on hover */
+    color: #007bff; /* Blue text color on hover */
+}
+
+.custom-bg .btn {
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.7); /* Light button background */
+    color: #333; /* Dark text for the buttons */
+    border: 1px solid #ccc;
+}
+
+.custom-bg .btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #007bff; /* Highlight color for hover effect */
+}
+
+.custom-bg .btn-light {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.custom-bg .btn-light:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #007bff;
+}

@@ -1,0 +1,25 @@
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+/* Apply dark text color globally */
+body, h1, h2, p, th, td, mat-label, .mat-button, .mat-raised-button {
+  color: #333; /* Dark color for text */
+}
+
+/* Optional: dark background with light text for specific areas */
+.mat-card {
+  background-color: #f8f9fa; /* Light background for contrast */
+  color: #333; /* Dark text color */
+}
+
+/* Additional dark styles for table rows */
+.mat-header-cell, .mat-cell {
+  color: #333; /* Dark text for table headers and rows */
+}

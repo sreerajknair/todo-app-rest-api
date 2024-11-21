@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <!-- Profile Section -->
+  <mat-card *ngIf="profile" class="profile-card p-4 shadow-sm mb-4 text-center">
+    <mat-card-title class="fs-4 dark-text">
+      Welcome, {{ profile.firstName }} {{ profile.lastName }}!
+    </mat-card-title>
+  </mat-card>
+
+  <!-- To-Do Section -->
+  <app-todo class="mt-4"></app-todo>
+
+  <!-- No Profile Section -->
+  <mat-card *ngIf="!profile" class="alert alert-warning mt-4 text-center" role="alert">
+    <mat-card-content>
+      <p class="mb-0">No profile information available.</p>
+    </mat-card-content>
+  </mat-card>
+</div>
